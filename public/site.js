@@ -5,9 +5,9 @@ const closeButton = document.querySelector(".close-button")
 
 const modalElements = {
 	title: document.getElementById('modalTitle'),
-	prepTime: document.getElementById('modalPrepTime'),
-	difficulty: document.getElementById('modalDifficulty'),
-	instructions: document.getElementById('modalInstructions'),
+	rating: document.getElementById('modalRating'),
+	data: document.getElementById('modalData'),
+	description: document.getElementById('modalDescription'),
 	image: document.getElementById('modalImage')
 }
 
@@ -37,21 +37,21 @@ const showGameList = games => {
 
 const showGameDetails = async id => {
 
-	const {title, image, instructions, ingredients, prepTime, difficulty} = await getGame(id)
+	const {title, image, data, description, playerCount,rating} = await getGame(id)
 
 	modalElements.title.textContent = title
-	modalElements.prepTime.textContent = `${prepTime} mins`
-	modalElements.difficulty.textContent = difficulty
-	modalElements.instructions.textContent = instructions
+	modalElements.rating.textContent = rating
+	modalElements.data.textContent = data
+	modalElements.description.textContent = description
 	modalElements.image.src = image
 
-	const ingredientsList = document.getElementById("modalIngredients")
-	ingredientsList.innerHTML = ''
-	ingredients.forEach(ingredient => {
-		const li = document.createElement('li')
-		li.textContent = ingredient
-		ingredientsList.appendChild(li)
-	})
+	// const ingredientsList = document.getElementById("modalIngredients")
+	// ingredientsList.innerHTML = ''
+	// data.forEach(ingredient => {
+	// 	const li = document.createElement('li')
+	// 	li.textContent = ingredient
+	// 	ingredientsList.appendChild(li)
+	// })
 
 	modal.style.display = 'flex'
 }
