@@ -1,0 +1,15 @@
+{
+  "name": "game-api",
+  "version": "1.0.0",
+  "description": "Game API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ansi-colors": "^4.1.3",
+    "express": "^4.21.1"
+  }
+}

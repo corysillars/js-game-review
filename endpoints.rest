@@ -1,0 +1,36 @@
+
+### Variables
+@url = http://localhost:3010/
+@apiUrl = http://localhost:3010/api/v1/
+
+
+### Webpage Endpoint
+
+### Game List Endpoint
+GET {{apiUrl}}
+
+### Game Detail Endpoint
+GET {{apiUrl}}game/1
+
+### Add Game Endpoint
+POST {{apiUrl}}game/add
+Content-Type: application/json
+
+{
+  "title": "Ironbound Siege",
+  "image": "https://images.pexels.com/photos/1439226/pexels-photo-1439226.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "data": [
+    "Genre: Real-Time Strategy",
+    "Platform: PC",
+    "Release Year: 2024",
+    "Developer: Forgehammer Interactive",
+    "Base-building warfare",
+    "Hero units with unique abilities",
+    "Large-scale siege battles"
+  ],
+  "description": "A real-time strategy game focused on epic siege warfare. Build fortified strongholds, train specialized units, deploy powerful heroes, and lead massive armies into battle across a medieval fantasy world.",
+  "rating": 4.6,
+  "playerCount": "1–6 players"
+}
+
+	
